@@ -45,7 +45,7 @@ To set up this project locally, follow these steps:
 1. **Clone the repositry:**
 
   ```bash
-  git clone https://github.com/yourusername/ecommerce-frontend.git
+  git clone https://github.com/Mrgnoblennon/E-Commerce-Store-Front.git
   cd ecommerce-frontend
   ```
 
