@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍 E-Commerce Frontend
 
-## Getting Started
+Welcome to the E-Commerce Frontend project! This is a modern, interactive front-end for an e-commerce platform, built using Next.js and TypeScript, and designed to work seamlessly with a separate backend web application. Please make sure you have setup the [E-Commerce-Admin](https://github.com/Mrgnoblennon/E-Commerce-Admin) and it is running correctly.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Product Browsing**: View and search for products.
+- **Cart Management**: Add, remove, and update items in the shopping cart.
+- **User Authentication**: Secure login and signup with Clerk.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Checkout**: Integration with backend for payment processing.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here’s a list of the main dependencies used in this project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 🎨 `@headlessui/react`: UI component library
+- 🌐 `axios`: HTTP client for making API requests
+- 🔗 `clsx`: Utility for conditionally joining classNames
+- 🖼 `lucide-react`: Icon library for React
+- ⚡ `next`: React framework for server-side rendering and static site generation
+- 🔍 `query-string`: Utility for parsing and stringifying URL query strings
+- ⚛️ `react`: JavaScript library for building user interfaces
+- 🌍 `react-dom`: Entry point to the DOM for React applications
+- 🍞 `react-hot-toast`: Toast notification library for React
+- 🌀 `tailwind-merge`: Utility for merging Tailwind CSS classes
+- 🐻 `zustand`: State management library
 
-## Learn More
+## 🛠 DevDependencies
 
-To learn more about Next.js, take a look at the following resources:
+- 🛠️ `@types/node`: TypeScript types for Node.js
+- 🔧 `@types/react`: TypeScript types for React
+- 🔩 `@types/react-dom`: TypeScript types for React DOM
+- 🧹 `eslint`: Linting tool for identifying and fixing code quality issues
+- 🧭 `eslint-config-next`: ESLint configuration for Next.js
+- ✂️ `postcss`: CSS post-processor for transforming styles
+- 🌈 `tailwindcss`: Utility-first CSS framework
+- 📘 `typescript`: Superset of JavaScript that adds static types
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📑 Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To set up this project locally, follow these steps:
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repositry:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  ```bash
+  git clone https://github.com/yourusername/ecommerce-frontend.git
+  cd ecommerce-frontend
+  ```
+
+2. **Install dependencies:**
+
+  ```bash
+  npm install
+  ```
+
+3. **Create a '.env' file and add this line**
+
+  ```bash
+  NEXT_PUBLIC_API_URL=http://localhost:"port"/api/"storeId"
+  ```
+  Make sure the port number matches the backend app and an existing store id is given.
+
+4. **Change line in home page component**
+
+  ```bash
+  const billboard = await getBillboard("billboardId");
+  ```
+  The string value needs to match an existing billboard id or an error will be thrown.
+
+5. **Run the development server:**
+
+  ```bash
+  npm run dev
+  ```
+
+## 🌟 Usage
+
+- Home Page: Browse featured products and navigate through categories.
+- Product Page: View detailed information about a product, including images, descriptions, and reviews.
+- Cart: Manage items in your cart with real-time updates.
+- Checkout: Proceed with purchasing items in the cart, including payment processing.
+
+## 📦 API Integration
+
+This frontend application communicates with a separate backend API for data retrieval and processing. Ensure the backend API is running and accessible from this frontend application.
+
+## 🧩 Components
+
+- Navbar: Provides navigation links and user authentication controls.
+- ProductList: Displays a list of products fetched from the backend.
+- ProductDetails: Shows detailed information about a specific product.
+- Cart: Manages the user's cart items.
+- Checkout: Handles the checkout process and integrates with the payment gateway.
+
+## 🎨 Styling
+
+Styling is handled using Tailwind CSS, with custom utilities merged via tailwind-merge. The design is responsive and adheres to modern UI/UX principles.
+
+## 📧 Contact
+For questions or feedback, please contact chasebarrettbrown@hotmail.com or checkout my [Github](https://github.com/Mrgnoblennon).
